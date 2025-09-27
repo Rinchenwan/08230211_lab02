@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tashi Lhamo | Education</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page background */
+    body {
+      background-color: #ffc0cb; /* light pink */
+      font-family: Arial, sans-serif;
+      color: #333;
+      font-size: 14px;
+    }
+
+    /* Topbar */
+    .topbar {
+      background: #3a1654;
+      padding: 8px 0;
+    }
+    .topbar ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .topbar li {
+      display: inline;
+      margin: 0 12px;
+    }
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .topbar a:hover {
+      color: #ffd700;
+    }
+
+    /* Banner with bouncing title */
+    .banner {
+      background-color: #ff69b4; /* hot pink */
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .banner h1 {
+      display: inline-block;
+      position: relative;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      animation: bounceTitle 3s ease-in-out infinite alternate;
+    }
+    @keyframes bounceTitle {
+      0% { left: 0; }
+      100% { left: 50px; } /* adjust distance for more bounce */
+    }
+
+    /* Section styling */
+    .section {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .section-header {
+      background: #4b1f70;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .section-content {
+      display: none; /* hidden by default, shown on click */
+    }
+    .edu-item {
+      margin: 15px 0;
+    }
+    .edu-item img {
+      width: 80px;
+      height: auto;
+      border-radius: 5px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .edu-item p {
+      display: inline-block;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background: #3a1654;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Banner with bouncing title -->
+  <div class="banner">
+    <h1>My Education</h1>
+  </div>
+
+  <!-- Section with toggle content -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection('edu-content')">Click to View My Education</div>
+    <div class="section-content" id="edu-content">
+      <div class="edu-item">
+        <img src="6233406287635401298.jpg" alt="Kupiyalsa Primary School">
+        <p>Kupiyalsa Primary School is where I studied from class PP till class four.
+           It holds my biggest childhood memories. I had to walk for 20 minutes to reach the school, as there was no boarding facility at all.
+           Whether it was raining or sunny, I had to walk every single day(PP–4)</p>
+      </div>
+      <div class="edu-item">
+        <img src="6233406287635401296.jpg" alt="Wambur Primary School">
+        <p>Wambur Primary School was the place where my life changed because it was my first experience living in a boarding school. 
+          At first, I had no idea how to be independent on my own, but somehow, I managed.
+          If I ever got a chance to go back, I would probably choose this school because it taught me so many life lessons. Even though it was in a remote place, it was peaceful and full of memories that shaped me.(4–6)</p>
+      </div>
+      <div class="edu-item">
+        <img src="6233406287635401297.jpg" alt="Autsho Central School">
+        <p>Autsho Central School was where I stepped into adulthood. It was here that I learned to handle everything on my own — from friendship betrayals and heartbreaks to procrastinating on homework.
+          It was kind of nice in a way because these challenges helped me grow and become stronger. I also met some of my closest friends there, friends who are still with me today.(7–10)</p>
+      </div>
+      <div class="edu-item">
+        <img src="6233406287635401295.jpg" alt="Lhuntse Higher Secondary School">
+        <p>Lhuntse Higher Secondary School was where I became a pro at skipping classes and not listening to teachers.
+          At first, I wanted to take science, but unfortunately, I got placed in the arts stream. From the moment I became an arts student, my dream of becoming who I wanted to be slowly faded.
+          I finished high school with many traumas and lessons learned along the way. (11–12)</p>
+      </div>
+      <div class="edu-item">
+        <img src="6233406287635401300.jpg" alt="Samtse College of Education">
+        <p>Samtse College of Education (B.Ed IT, 3rd Year)
+          Samtse College of Education felt like a blessing — I believe God heard my prayers when I got selected to study there.
+          At first, I was happy, but then I found out my course was STEM-based, which was completely new to me since I had never studied it before. It was difficult at the beginning, but as time went on, I learned so much from my classmates and peers.
+          I am truly thankful to everyone who kept motivating me and helped me whenever I needed support.
+          There is still more to come in this journey. This is my educational life so far — my future is unknown, but I’m ready to keep going
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Tashi Lhamo. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
